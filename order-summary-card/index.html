@@ -13,7 +13,7 @@
 			sizes="32x32"
 			href="/order-summary-card/assets/images/favicon-32x32.png"
 		/>
-
+		<link rel="stylesheet" href="/order-summary-card/css/style.css" />
 		<title>Frontend Mentor | Order summary card</title>
 
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,21 +26,58 @@
 				color: hsl(228, 45%, 44%);
 			}
 			@media screen and (max-width: 1440px) /*Desktop*/ {
+				body {
+					background-color: var(--pale-blue);
+					background-image: url(/order-summary-card/assets/images/pattern-background-desktop.svg);
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
 			}
 			@media screen and (max-width: 380px) /*Mobile*/ {
+				body {
+					background-color: var(--pale-blue);
+					background-image: url(/order-summary-card/assets/images/pattern-background-mobile.svg);
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
 			}
 		</style>
 	</head>
 	<body>
-		Order Summary You can now listen to millions of songs, audiobooks, and
-		podcasts on any device anywhere you like! Annual Plan $59.99/year Change
-		Proceed to Payment Cancel Order
+		<div id="boxContainer">
+			<img
+				src="/order-summary-card/assets/images/illustration-hero.svg"
+				id="dancingGirl"
+				alt=""
+			/>
 
+			<div id="orderSummaryTitle" class="title">Order Summary</div>
+
+			<div id="orderSummaryText">
+				You can now listen to millions of songs, audiobooks, and podcasts on any
+				device anywhere you like!
+			</div>
+
+			<div id="planBox">
+				<img
+					src="/order-summary-card/assets/images/icon-music.svg"
+					alt=""
+					id="iconMusic"
+				/>
+				<div id="planTitle" class="title">Annual Plan</div>
+				<div id="planPrice">$59.99/year</div>
+				<a id="planChange" href="#">Change</a>
+			</div>
+			<div id="toPayment">Proceed to Payment</div>
+			<div id="cancelOrder">Cancel Order</div>
+		</div>
+		<!--
 		<div class="attribution">
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
 				>Frontend Mentor</a
 			>. Coded by <a href="#">Saleem Toure Issifou</a>.
 		</div>
+-->
 	</body>
 </html>
