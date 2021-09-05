@@ -1,24 +1,36 @@
-:root{
-  /* colors and fonts */
-  --font: "Montserrat", sans-serif;
-  --white: #ffffff;
+/** @format */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+	/* colors and fonts */
+	--font: 'Red Hat Display', sans-serif;
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-html{
-  font-size: 62.5%;
+html {
+	font-size: 62.5%;
 }
 
-html, body{
-  height: 100%;
+body p {
+	font-size: 16px;
 }
 
-body{
-  width: 100%;
-  font-family: var(--font);
+html,
+body {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	font-family: var(--font);
 }
