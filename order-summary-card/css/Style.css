@@ -25,11 +25,6 @@ body p {
 	font-size: 16px;
 }
 
-html,
-body {
-	height: 100%;
-}
-
 body {
 	width: 100%;
 	font-family: var(--font);
@@ -38,9 +33,17 @@ body {
 #boxContainer {
 	overflow: hidden;
 	border-radius: 25px;
-	margin: 20% 5%;
+	position: absolute;
+	max-width: 85%;
+	height: 80%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 	text-align: center;
 	background-color: white;
+	box-shadow: 0px 20px 30px -10px grey;
 }
 #dancingGirl {
 	width: 100%;
@@ -50,38 +53,93 @@ body {
 	color: var(--dark-blue);
 }
 #orderSummaryTitle {
+	font-size: 19px;
+	padding: 20px;
 }
 #orderSummaryText {
 	color: var(--desaturated-blue);
+	padding: 0px 20px;
+	font-size: 14px;
+	line-height: 25px;
 }
 #planBox {
 	background-color: var(--very-pale-blue);
-	margin: 20px;
 	padding: 15px;
 	border-radius: 8px;
+	height: fit-content;
+	width: 88%;
+	margin: 25px auto;
 }
 #iconMusic {
+	float: left;
+	transform: translate(0, -7px);
 }
 #planTitle {
+	transform: translate(-45px, 1px);
+	font-size: 12px;
 }
 #planPrice {
 	color: var(--desaturated-blue);
+	transform: translate(-45px, 5px);
+	font-size: 12px;
 }
 #planChange {
 	color: var(--bright-blue);
 	font-weight: 900;
+	font-size: 11px;
+	position: absolute;
+	transform: translate(52px, -17px);
+}
+#planChange:hover {
+	color: hsl(241, 57%, 63%);
 }
 #toPayment {
 	background-color: var(--bright-blue);
 	color: white;
-	margin: 20px;
-	padding: 10px;
+	margin: 25px 20px;
+	padding: 15px;
 	border-radius: 8px;
-	box-shadow: 1px 10px 15px -12px black;
+	box-shadow: 0px 10px 30px -10px black;
 	font-weight: 700;
+	font-size: 12px;
+}
+#toPayment:hover {
+	background-color: hsl(241, 57%, 63%);
 }
 #cancelOrder {
-	padding-bottom: 30px;
 	color: var(--desaturated-blue);
 	font-weight: 900;
+	font-size: 14px;
+	margin-top: 25px;
+}
+#cancelOrder:hover {
+	color: var(--dark-blue);
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 1440px) /*Desktop*/ {
+	body {
+		background-color: var(--pale-blue);
+		background-image: url(/order-summary-card/assets/images/pattern-background-desktop.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: flex;
+	}
+	#boxContainer {
+		width: max-content;
+		height: max-content;
+	}
+}
+@media screen and (max-width: 380px) /*Mobile*/ {
+	body {
+		background-color: var(--pale-blue);
+		background-image: url(/order-summary-card/assets/images/pattern-background-mobile.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
 }
