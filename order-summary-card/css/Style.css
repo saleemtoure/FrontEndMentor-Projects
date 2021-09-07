@@ -125,9 +125,9 @@ body {
 @media screen and (max-width: 1440px) /*Desktop*/ {
 	body {
 		background-color: var(--pale-blue);
-		background-image: url(/order-summary-card/assets/images/pattern-background-desktop.svg);
+		background-image: url(/FrontEndMentor-Projects/order-summary-card/assets/images/pattern-background-desktop.svg);
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 		display: flex;
 	}
 	#boxContainer {
@@ -138,8 +138,8 @@ body {
 @media screen and (max-width: 380px) /*Mobile*/ {
 	body {
 		background-color: var(--pale-blue);
-		background-image: url(/order-summary-card/assets/images/pattern-background-mobile.svg);
+		background-image: url(/FrontEndMentor-Projects/order-summary-card/assets/images/pattern-background-mobile.svg);
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 	}
 }
