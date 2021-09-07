@@ -137,7 +137,7 @@ body {
 }
 @media screen and (max-width: 380px) /*Mobile*/ {
 	body {
-		background-color: var(--pale-blue);
+		background-color: var(--pale-blue) ;
 		background-image: url(/FrontEndMentor-Projects/order-summary-card/assets/images/pattern-background-mobile.svg);
 		background-repeat: no-repeat;
 		background-size: cover;
