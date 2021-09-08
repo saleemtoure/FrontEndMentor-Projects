@@ -1,0 +1,61 @@
+/** @format */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+
+:root {
+	/* fonts */
+	--font-Lexend: 'Lexend Deca', sans-serif;
+	--font-Shoulders: 'Big Shoulders Display', sans-serif;
+	/* colors */
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+	--transparent-white /*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
+	--very-light-gray /*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	font-size: 15px;
+}
+a {
+}
+a:visited {
+} /*Hvordan lenker som har blitt trukket på vises*/
+a:hover {
+} /*Hvordan lenker man har musen på vises*/
+a:active {
+} /*Utseendet til lenken i det den blir trukket på*/
+a:focus {
+} /*Utseendet til lenken når man hopper til den med TAB*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:1440px) /*Desktop*/ {
+	body{
+		background-color: red;
+	}
+	
+}
+@media screen and (max-width:380px) /*Mobile*/ {
+	body{
+		background-color: blue;
+	}
+}
