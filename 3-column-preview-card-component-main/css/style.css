@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
 
-
 :root {
 	/* fonts */
 	--font-Lexend: 'Lexend Deca', sans-serif;
@@ -11,8 +10,13 @@
 	--bright-orange: hsl(31, 77%, 52%);
 	--dark-cyan: hsl(184, 100%, 22%);
 	--very-dark-cyan: hsl(179, 100%, 13%);
-	--transparent-white /*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
-	--very-light-gray /*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+	--transparent-white/*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
+	--very-light-gray/*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+	/* border */
+	--border-Top: 10px 10px 0px 0px;
+	--border-Bottom: 0px 0px 10px 10px;
+	--border-Right: 0px 10px 10px 0px;
+	--border-Left: 10px 0px 10px 0px;
 }
 
 * {
@@ -34,28 +38,125 @@ body {
 	width: 100%;
 	font-size: 15px;
 }
-a {
+
+#container {
+	display: flex;
 }
-a:visited {
-} /*Hvordan lenker som har blitt trukket på vises*/
-a:hover {
+
+.carIcon {
+}
+#sedan {
+	background-color: var(--bright-orange);
+}
+#sedan .learnMore {
+	color: var(--bright-orange);
+}
+#suv {
+	background-color: var(--dark-cyan);
+}
+#suv .learnMore {
+	color: var(--dark-cyan);
+}
+#luxury {
+	background-color: var(--very-dark-cyan);
+}
+#luxury .learnMore {
+	color: var(--very-dark-cyan);
+}
+
+.sectionContent {
+	margin-left: 13%;
+	margin-right: 20%;
+}
+h1 {
+	text-transform: uppercase;
+	font-family: var(--font-Shoulders);
+	color: var(--very-light-gray);
+}
+p {
+	font-family: var(--font-Lexend);
+	color: var(--transparent-white);
+}
+/*a.learnMore {	
+}
+*/
+/*
+a:visited.learnMore {
+} Hvordan lenker som har blitt trukket på vises
+*/
+a:hover .learnMore {
+	border: 2px solid var(--very-light-gray);
+	color: var(--very-light-gray);
 } /*Hvordan lenker man har musen på vises*/
-a:active {
-} /*Utseendet til lenken i det den blir trukket på*/
-a:focus {
-} /*Utseendet til lenken når man hopper til den med TAB*/
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/*
+a:active.learnMore {
+} Utseendet til lenken i det den blir trukket på
+*/
 
-@media screen and (max-width:1440px) /*Desktop*/ {
-	body{
+/*
+a:focus.learnMore {
+} Utseendet til lenken når man hopper til den med TAB
+*/
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1440px) /*Desktop*/ {
+	body {
+		background-color: var(--very-light-gray);
 		background-color: red;
 	}
-	
+	.borderRight {
+		border-radius: var(--border-Right);
+	}
+	.borderLeft {
+		border-radius: var(--border-Left);
+	}
 }
-@media screen and (max-width:380px) /*Mobile*/ {
-	body{
-		background-color: blue;
+@media screen and (max-width: 380px) /*Mobile*/ {
+	body {
+		background-color: var(--very-light-gray);
+	}
+	#container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 25% 0px;
+	}
+	.carIcon {
+		margin: 60px 0px 35px;
+	}
+	h1 {
+		margin: 0px 0px 30px;
+		font-size: 40px;
+	}
+	p {
+		line-height: 2em;
+	}
+	.learnMore {
+		display: block;
+		background-color: var(--very-light-gray);
+		font-family: var(--font-Lexend);
+		border-radius: 40px;
+		text-align: center;
+		text-decoration: none;
+		line-height: 2em;
+		margin: 25px 70px 45px 0px;
+		padding: 10px 20px;
+	}
+	.carSection {
+		width: 90%;
+	}
+	.borderTop {
+		border-radius: var(--border-Top);
+	}
+	.borderBottom {
+		border-radius: var(--border-Bottom);
 	}
 }
