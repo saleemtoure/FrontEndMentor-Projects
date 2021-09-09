@@ -16,7 +16,7 @@
 	--border-Top: 10px 10px 0px 0px;
 	--border-Bottom: 0px 0px 10px 10px;
 	--border-Right: 0px 10px 10px 0px;
-	--border-Left: 10px 0px 10px 0px;
+	--border-Left: 10px 0px 0px 10px;
 }
 
 * {
@@ -84,7 +84,7 @@ p {
 a:visited.learnMore {
 } Hvordan lenker som har blitt trukket på vises
 */
-a:hover .learnMore {
+.learnMore a:hover {
 	border: 2px solid var(--very-light-gray);
 	color: var(--very-light-gray);
 } /*Hvordan lenker man har musen på vises*/
@@ -110,7 +110,10 @@ a:focus.learnMore {
 @media screen and (max-width: 1440px) /*Desktop*/ {
 	body {
 		background-color: var(--very-light-gray);
-		background-color: red;
+	}
+	.carSection {
+		height: 75%;
+		width: 280px;
 	}
 	.borderRight {
 		border-radius: var(--border-Right);
@@ -118,10 +121,47 @@ a:focus.learnMore {
 	.borderLeft {
 		border-radius: var(--border-Left);
 	}
+	#container {
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+	.carIcon {
+		margin: 35px 0px 25px;
+	}
+	h1 {
+		margin: 0px 0px 15px;
+		font-size: 40px;
+	}
+	p {
+		line-height: 2em;
+		font-size: 12px;
+	}
+	.learnMore {
+		display: block;
+		background-color: var(--very-light-gray);
+		font-family: var(--font-Lexend);
+		border-radius: 40px;
+		text-align: center;
+		text-decoration: none;
+		transform: translate(-30px);
+		margin: 50% 30px;
+		padding: 10px 15px;
+	}
 }
 @media screen and (max-width: 380px) /*Mobile*/ {
 	body {
 		background-color: var(--very-light-gray);
+	}
+	.carSection {
+		width: 90%;
+	}
+	.borderTop {
+		border-radius: var(--border-Top);
+	}
+	.borderBottom {
+		border-radius: var(--border-Bottom);
 	}
 	#container {
 		flex-direction: column;
@@ -149,14 +189,5 @@ a:focus.learnMore {
 		line-height: 2em;
 		margin: 25px 70px 45px 0px;
 		padding: 10px 20px;
-	}
-	.carSection {
-		width: 90%;
-	}
-	.borderTop {
-		border-radius: var(--border-Top);
-	}
-	.borderBottom {
-		border-radius: var(--border-Bottom);
 	}
 }
