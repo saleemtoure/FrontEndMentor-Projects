@@ -90,6 +90,7 @@ a.learnMore:hover {
 	border: 2px solid var(--very-light-gray);
 	background-color: transparent;
 	color: var(--very-light-gray) !important;
+	line-height: 100%;
 } /*Hvordan lenker man har musen på vises*/
 
 /*
