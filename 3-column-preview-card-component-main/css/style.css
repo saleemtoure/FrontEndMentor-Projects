@@ -80,13 +80,16 @@ p {
 /*a.learnMore {	
 }
 */
+
 /*
 a:visited.learnMore {
 } Hvordan lenker som har blitt trukket på vises
 */
-.learnMore a:hover {
+
+a.learnMore:hover {
 	border: 2px solid var(--very-light-gray);
-	color: var(--very-light-gray);
+	background-color: transparent;
+	color: var(--very-light-gray) !important;
 } /*Hvordan lenker man har musen på vises*/
 
 /*
